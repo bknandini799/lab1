@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Website</title>
+
+  <title>Nandini | My Personal Website</title>
 
   <style>
     * {
@@ -12,65 +13,158 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      color: #222;
+      background: #fff7fb;
+      color: #333;
       line-height: 1.6;
     }
 
     header {
-      background: #222;
+      background: linear-gradient(135deg, #8e2de2, #ff6b9d);
       color: white;
-      padding: 20px;
       text-align: center;
+      padding: 50px 20px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
     }
 
     nav {
-      margin-top: 10px;
+      background: #222;
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 10px;
+      margin: 0 15px;
+      font-weight: bold;
     }
 
-    main {
+    nav a:hover {
+      color: #ff6b9d;
+    }
+
+    section {
       max-width: 1000px;
       margin: 50px auto;
-      padding: 20px;
+      padding: 30px;
       text-align: center;
     }
 
-    h1 {
+    section h2 {
+      font-size: 2rem;
+      color: #8e2de2;
+      margin-bottom: 20px;
+    }
+
+    .about {
+      background: white;
+      border-radius: 15px;
+      padding: 35px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .about p {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: white;
+      width: 250px;
+      padding: 30px 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card .emoji {
       font-size: 3rem;
       margin-bottom: 15px;
     }
 
-    p {
-      margin-bottom: 25px;
+    .card h3 {
+      color: #8e2de2;
+      margin-bottom: 10px;
     }
 
-    .button {
-      display: inline-block;
-      padding: 12px 24px;
-      background: #007bff;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
+    .food {
+      background: linear-gradient(135deg, #fff0f6, #f3e8ff);
+      border-radius: 20px;
     }
 
-    .button:hover {
-      background: #0056b3;
+    .food-list {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .food-item {
+      background: white;
+      padding: 20px 30px;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .favorite {
+      border: 3px solid #ff6b9d;
+      font-weight: bold;
     }
 
     footer {
-      margin-top: 50px;
-      padding: 20px;
-      text-align: center;
       background: #222;
       color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 50px;
+    }
+
+    footer p {
+      margin: 5px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      nav a {
+        margin: 0 7px;
+        font-size: 14px;
+      }
+
+      section {
+        margin: 30px auto;
+        padding: 20px;
+      }
     }
   </style>
 </head>
@@ -78,23 +172,104 @@
 <body>
 
   <header>
-    <h2>My Website</h2>
-
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </nav>
+    <h1>Hi, I'm Nandini! 👋</h1>
+    <p>Welcome to my personal website 💜</p>
   </header>
 
-  <main>
-    <h1>Welcome!</h1>
-    <p>This is my first HTML website.</p>
-    <a href="#" class="button">Get Started</a>
-  </main>
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#hobbies">Hobbies</a>
+    <a href="#food">Favorites</a>
+  </nav>
+
+  <section id="about">
+    <div class="about">
+      <h2>About Me 🌸</h2>
+
+      <p>
+        Hello! My name is <strong>Nandini</strong>.
+      </p>
+
+      <p>
+        I am a <strong>2nd year Computer Science Engineering student</strong>
+        at <strong>JAIN College</strong>.
+      </p>
+
+      <p>
+        I enjoy learning about technology and spending my free time
+        doing things that make me happy.
+      </p>
+    </div>
+  </section>
+
+  <section id="hobbies">
+    <h2>My Hobbies 🎶🎬</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="emoji">🎵</div>
+        <h3>Music</h3>
+        <p>
+          I love listening to music. Music is one of my favorite ways
+          to relax and enjoy my free time.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="emoji">🎬</div>
+        <h3>Movies</h3>
+        <p>
+          I enjoy watching movies and spending my free time
+          exploring different kinds of stories and films.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="emoji">💻</div>
+        <h3>Technology</h3>
+        <p>
+          As a CSE student, I am interested in computers,
+          programming and learning new technologies.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="food" class="food">
+    <h2>My Favorite Foods 😋</h2>
+
+    <div class="food-list">
+
+      <div class="food-item favorite">
+        🥦 Gobhi Manchurian ❤️
+        <br>
+        <small>My favorite!</small>
+      </div>
+
+      <div class="food-item">
+        🥞 Dosa
+      </div>
+
+      <div class="food-item">
+        🍦 Ice Cream
+      </div>
+
+      <div class="food-item">
+        🥟 Gol Gappa
+      </div>
+
+    </div>
+
+    <p style="margin-top: 25px;">
+      I like <strong>Gobhi Manchurian</strong> more than Gol Gappa! 😋
+    </p>
+  </section>
 
   <footer>
-    <p>&copy; 2026 My Website. All rights reserved.</p>
+    <p>Made with ❤️ by Nandini</p>
+    <p>&copy; 2026 Nandini | CSE Student</p>
   </footer>
 
 </body>
